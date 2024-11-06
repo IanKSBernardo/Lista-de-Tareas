@@ -1,0 +1,151 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(126deg, #edab8b, #f5ebb0, #dad061);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: cursive, sans-serif;
+}
+
+/**** CONTENEDOR GENERAL ****/
+
+#allContainer{
+    background-color: #776c5a;
+    width: 80vw;
+    height: 70vh;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 4px 5px 6px 2px #0007,
+                inset 0 0 17px #000;
+}
+
+/**** WRITER CONTAINER ****/
+
+#writerContainer{
+    background-color: #acc59d;
+    box-shadow: inset 0 0 5px #000;
+    border-radius: 10px;
+    padding: 0 0 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.tarea-input{
+    flex-grow: 2;
+    background: none;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-family: cursive, sans-serif;
+    letter-spacing: 1.3px;
+}
+
+.tarea-input::placeholder{
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #000c;
+}
+
+.tarea-button{
+    margin-right: 5px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    text-shadow: 0 0 1px #000;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tarea-button:active{
+    color: #0008;
+    text-shadow: 0 0 1px #0008;
+}
+
+#allContainer hr{
+    width: 80%;
+    border: none;
+    border-top: 1px solid #0005;
+    margin: 20px auto;
+}
+
+/**** TASK LIST CONTAINER ****/
+
+#taskListContainer{
+    background-color: #dad061dd;
+    height: 80%;
+    border-radius: 10px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.task-item{
+    border-bottom: 1px  solid #0004;
+    padding-left: 3px;
+    padding-bottom: 6px;
+    margin: 3px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.task-name{
+    flex-grow: 2;
+    width: 70%;
+    word-wrap: break-word;
+    border: none;
+    outline: none;
+}
+
+.task-name:focus{
+    color: #000b;
+}
+
+.task-check{
+    flex-grow: 1;
+    accent-color: #776c5a;
+    max-width: 30px;
+    transform: scale(1.8);
+    cursor: pointer;
+    user-select: none;
+}
+
+.task-remove{
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+    transform: scale(1.23);
+    cursor: pointer;
+    user-select: none;
+    margin-left: 15px;
+}
+
+.task-remove:active{
+    color: #fffb;
+}
+
+/**** MEDIA QUERIES ****/
+
+@media (min-width: 830px){
+    #allContainer{
+        width: 60vw;
+    }
+}
+
+
+@media (min-width: 1230px){
+    #allContainer{
+        width: 40vw;
+    }
+}
